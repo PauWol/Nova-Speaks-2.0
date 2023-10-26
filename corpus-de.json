@@ -1,0 +1,796 @@
+{
+    "settings": {
+      "languages": [
+        "de"
+      ],
+      "tag": "nlp",
+      "threshold": 0.5,
+      "autoLoad": true,
+      "autoSave": true,
+      "modelFileName": "model.nlp",
+      "executeActionsBeforeAnswers": false,
+      "calculateSentiment": true
+    },
+    "nluManager": {
+      "settings": {
+        "tag": "nlu-manager"
+      },
+      "locales": [
+        "de"
+      ],
+      "languageNames": {},
+      "domainManagers": {
+        "de": {
+          "settings": {
+            "locale": "de",
+            "trainByDomain": false,
+            "tag": "domain-manager-de",
+            "nluByDomain": {
+              "default": {
+                "className": "NeuralNlu",
+                "settings": {}
+              }
+            },
+            "useStemDict": true
+          },
+          "stemDict": {
+            "moin": {
+              "intent": "greeting",
+              "domain": "default"
+            },
+            "hallo": {
+              "intent": "greeting",
+              "domain": "default"
+            },
+            "hi": {
+              "intent": "greeting",
+              "domain": "default"
+            },
+            "du,hey": {
+              "intent": "greeting",
+              "domain": "default"
+            },
+            "yo": {
+              "intent": "greeting",
+              "domain": "default"
+            },
+            "gut,morg": {
+              "intent": "greeting",
+              "domain": "default"
+            },
+            "abend,gut": {
+              "intent": "greeting",
+              "domain": "default"
+            },
+            "gut,tag": {
+              "intent": "greeting",
+              "domain": "default"
+            },
+            "gott,gruss": {
+              "intent": "greeting",
+              "domain": "default"
+            },
+            "alt,bist,du,wie": {
+              "intent": "agent.birthday",
+              "domain": "default"
+            },
+            "dich,gebaut,hat,wer": {
+              "intent": "agent.birthday",
+              "domain": "default"
+            },
+            "dich,hat,trainiert,wer": {
+              "intent": "agent.birthday",
+              "domain": "default"
+            },
+            "bist,du,wer": {
+              "intent": "agent.whoAmI",
+              "domain": "default"
+            },
+            "du,mach,was": {
+              "intent": "agent.whoAmI",
+              "domain": "default"
+            },
+            "du,helf,kanst,mir": {
+              "intent": "agent.whoAmI",
+              "domain": "default"
+            },
+            "schlau,sei": {
+              "intent": "agent.beClever",
+              "domain": "default"
+            },
+            "bist,du,dumm": {
+              "intent": "agent.beClever",
+              "domain": "default"
+            },
+            "das,du,kanst,nicht,selb": {
+              "intent": "agent.beClever",
+              "domain": "default"
+            },
+            "dazu,du,kanst,lern,nicht": {
+              "intent": "agent.beClever",
+              "domain": "default"
+            }
+          },
+          "intentDict": {
+            "greeting": "default",
+            "agent.birthday": "default",
+            "agent.whoAmI": "default",
+            "agent.beClever": "default"
+          },
+          "sentences": [
+            {
+              "domain": "default",
+              "utterance": "moin",
+              "intent": "greeting"
+            },
+            {
+              "domain": "default",
+              "utterance": "hallo",
+              "intent": "greeting"
+            },
+            {
+              "domain": "default",
+              "utterance": "hi",
+              "intent": "greeting"
+            },
+            {
+              "domain": "default",
+              "utterance": "hey du",
+              "intent": "greeting"
+            },
+            {
+              "domain": "default",
+              "utterance": "yo",
+              "intent": "greeting"
+            },
+            {
+              "domain": "default",
+              "utterance": "guten morgen",
+              "intent": "greeting"
+            },
+            {
+              "domain": "default",
+              "utterance": "guten abend",
+              "intent": "greeting"
+            },
+            {
+              "domain": "default",
+              "utterance": "guten tag",
+              "intent": "greeting"
+            },
+            {
+              "domain": "default",
+              "utterance": "grüß gott",
+              "intent": "greeting"
+            },
+            {
+              "domain": "default",
+              "utterance": "wie alt bist du",
+              "intent": "agent.birthday"
+            },
+            {
+              "domain": "default",
+              "utterance": "Wer hat dich gebaut",
+              "intent": "agent.birthday"
+            },
+            {
+              "domain": "default",
+              "utterance": "Wer hat dich trainiert",
+              "intent": "agent.birthday"
+            },
+            {
+              "domain": "default",
+              "utterance": "Wer bist du",
+              "intent": "agent.whoAmI"
+            },
+            {
+              "domain": "default",
+              "utterance": "was machst du",
+              "intent": "agent.whoAmI"
+            },
+            {
+              "domain": "default",
+              "utterance": "kanst du mir helfen",
+              "intent": "agent.whoAmI"
+            },
+            {
+              "domain": "default",
+              "utterance": "sei schlauer",
+              "intent": "agent.beClever"
+            },
+            {
+              "domain": "default",
+              "utterance": "bist du dumm",
+              "intent": "agent.beClever"
+            },
+            {
+              "domain": "default",
+              "utterance": "selbst das kanst du nicht",
+              "intent": "agent.beClever"
+            },
+            {
+              "domain": "default",
+              "utterance": "kanst du nicht dazu lernen",
+              "intent": "agent.beClever"
+            }
+          ],
+          "domains": {
+            "master_domain": {
+              "settings": {
+                "locale": "de",
+                "tag": "nlu-de",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": {
+                "moin": 1,
+                "hallo": 1,
+                "hi": 1,
+                "hey": 1,
+                "du": 1,
+                "yo": 1,
+                "gut": 1,
+                "morg": 1,
+                "abend": 1,
+                "tag": 1,
+                "gruss": 1,
+                "gott": 1,
+                "wie": 1,
+                "alt": 1,
+                "bist": 1,
+                "wer": 1,
+                "hat": 1,
+                "dich": 1,
+                "gebaut": 1,
+                "trainiert": 1,
+                "was": 1,
+                "mach": 1,
+                "kanst": 1,
+                "mir": 1,
+                "helf": 1,
+                "sei": 1,
+                "schlau": 1,
+                "dumm": 1,
+                "selb": 1,
+                "das": 1,
+                "nicht": 1,
+                "dazu": 1,
+                "lern": 1
+              },
+              "intents": {
+                "greeting": 1,
+                "agent.birthday": 1,
+                "agent.whoAmI": 1,
+                "agent.beClever": 1
+              },
+              "intentFeatures": {
+                "greeting": {
+                  "moin": 1,
+                  "hallo": 1,
+                  "hi": 1,
+                  "hey": 1,
+                  "du": 1,
+                  "yo": 1,
+                  "gut": 1,
+                  "morg": 1,
+                  "abend": 1,
+                  "tag": 1,
+                  "gruss": 1,
+                  "gott": 1
+                },
+                "agent.birthday": {
+                  "wie": 1,
+                  "alt": 1,
+                  "bist": 1,
+                  "du": 1,
+                  "wer": 1,
+                  "hat": 1,
+                  "dich": 1,
+                  "gebaut": 1,
+                  "trainiert": 1
+                },
+                "agent.whoAmI": {
+                  "wer": 1,
+                  "bist": 1,
+                  "du": 1,
+                  "was": 1,
+                  "mach": 1,
+                  "kanst": 1,
+                  "mir": 1,
+                  "helf": 1
+                },
+                "agent.beClever": {
+                  "sei": 1,
+                  "schlau": 1,
+                  "bist": 1,
+                  "du": 1,
+                  "dumm": 1,
+                  "selb": 1,
+                  "das": 1,
+                  "kanst": 1,
+                  "nicht": 1,
+                  "dazu": 1,
+                  "lern": 1
+                }
+              },
+              "featuresToIntent": {
+                "moin": [
+                  "greeting"
+                ],
+                "hallo": [
+                  "greeting"
+                ],
+                "hi": [
+                  "greeting"
+                ],
+                "hey": [
+                  "greeting"
+                ],
+                "du": [
+                  "greeting",
+                  "agent.birthday",
+                  "agent.whoAmI",
+                  "agent.beClever"
+                ],
+                "yo": [
+                  "greeting"
+                ],
+                "gut": [
+                  "greeting"
+                ],
+                "morg": [
+                  "greeting"
+                ],
+                "abend": [
+                  "greeting"
+                ],
+                "tag": [
+                  "greeting"
+                ],
+                "gruss": [
+                  "greeting"
+                ],
+                "gott": [
+                  "greeting"
+                ],
+                "wie": [
+                  "agent.birthday"
+                ],
+                "alt": [
+                  "agent.birthday"
+                ],
+                "bist": [
+                  "agent.birthday",
+                  "agent.whoAmI",
+                  "agent.beClever"
+                ],
+                "wer": [
+                  "agent.birthday",
+                  "agent.whoAmI"
+                ],
+                "hat": [
+                  "agent.birthday"
+                ],
+                "dich": [
+                  "agent.birthday"
+                ],
+                "gebaut": [
+                  "agent.birthday"
+                ],
+                "trainiert": [
+                  "agent.birthday"
+                ],
+                "was": [
+                  "agent.whoAmI"
+                ],
+                "mach": [
+                  "agent.whoAmI"
+                ],
+                "kanst": [
+                  "agent.whoAmI",
+                  "agent.beClever"
+                ],
+                "mir": [
+                  "agent.whoAmI"
+                ],
+                "helf": [
+                  "agent.whoAmI"
+                ],
+                "sei": [
+                  "agent.beClever"
+                ],
+                "schlau": [
+                  "agent.beClever"
+                ],
+                "dumm": [
+                  "agent.beClever"
+                ],
+                "selb": [
+                  "agent.beClever"
+                ],
+                "das": [
+                  "agent.beClever"
+                ],
+                "nicht": [
+                  "agent.beClever"
+                ],
+                "dazu": [
+                  "agent.beClever"
+                ],
+                "lern": [
+                  "agent.beClever"
+                ]
+              },
+              "neuralNetwork": {
+                "settings": {
+                  "locale": "de",
+                  "tag": "nlu-de",
+                  "keepStopwords": true,
+                  "nonefeatureValue": 1,
+                  "nonedeltaMultiplier": 1.2,
+                  "spellCheck": false,
+                  "spellCheckDistance": 1,
+                  "filterZeros": true,
+                  "log": true
+                },
+                "features": [
+                  "moin",
+                  "hallo",
+                  "hi",
+                  "hey",
+                  "du",
+                  "yo",
+                  "gut",
+                  "morg",
+                  "abend",
+                  "tag",
+                  "gruss",
+                  "gott",
+                  "wie",
+                  "alt",
+                  "bist",
+                  "wer",
+                  "hat",
+                  "dich",
+                  "gebaut",
+                  "trainiert",
+                  "was",
+                  "mach",
+                  "kanst",
+                  "mir",
+                  "helf",
+                  "sei",
+                  "schlau",
+                  "dumm",
+                  "selb",
+                  "das",
+                  "nicht",
+                  "dazu",
+                  "lern"
+                ],
+                "intents": [
+                  "greeting",
+                  "agent.birthday",
+                  "agent.whoAmI",
+                  "agent.beClever"
+                ],
+                "perceptrons": [
+                  [
+                    5.251352310180664,
+                    5.28062629699707,
+                    5.2651753425598145,
+                    7.847599029541016,
+                    -2.6774144172668457,
+                    5.213475704193115,
+                    3.9475419521331787,
+                    1.3187801837921143,
+                    1.3164341449737549,
+                    1.3131780624389648,
+                    2.6365303993225098,
+                    2.6365303993225098,
+                    -1.3065887689590454,
+                    -1.3065887689590454,
+                    -4.196160316467285,
+                    -3.1134777069091797,
+                    -2.3782026767730713,
+                    -2.3782026767730713,
+                    -1.2224605083465576,
+                    -1.1521430015563965,
+                    -3.161576509475708,
+                    -3.161576509475708,
+                    -3.1714131832122803,
+                    -1.5859169960021973,
+                    -1.5859169960021973,
+                    -4.50230073928833,
+                    -4.50230073928833,
+                    -2.1210694313049316,
+                    -0.7934249043464661,
+                    -0.7934249043464661,
+                    -1.5847842693328857,
+                    -0.7908509969711304,
+                    -0.7908509969711304,
+                    9.019218207212335
+                  ],
+                  [
+                    -0.560617983341217,
+                    -0.5586956739425659,
+                    -0.5566372871398926,
+                    -0.317501962184906,
+                    -0.8864685893058777,
+                    -0.5535667538642883,
+                    -0.5401033163070679,
+                    -0.18275518715381622,
+                    -0.16406504809856415,
+                    -0.14600686728954315,
+                    -0.3013288676738739,
+                    -0.3013288676738739,
+                    7.045112133026123,
+                    7.045112133026123,
+                    0.4411202073097229,
+                    -0.010510415770113468,
+                    5.485219478607178,
+                    5.485219478607178,
+                    2.759783983230591,
+                    2.723649263381958,
+                    -0.40521928668022156,
+                    -0.40521928668022156,
+                    -0.5341818332672119,
+                    -0.24176408350467682,
+                    -0.24176408350467682,
+                    -0.3729621171951294,
+                    -0.3729621171951294,
+                    -1.0954060554504395,
+                    -0.11792713403701782,
+                    -0.11792713403701782,
+                    -0.24087406694889069,
+                    -0.08429552614688873,
+                    -0.08429552614688873,
+                    0.5609527278187294
+                  ],
+                  [
+                    -0.32383909821510315,
+                    -0.3135642409324646,
+                    -0.3114207684993744,
+                    -4.011720657348633,
+                    4.442019462585449,
+                    -0.22650204598903656,
+                    -0.3400324285030365,
+                    -0.10990482568740845,
+                    -0.09851329028606415,
+                    -0.08735038340091705,
+                    -0.15829285979270935,
+                    -0.15829285979270935,
+                    -2.9667110443115234,
+                    -2.9667110443115234,
+                    1.929748773574829,
+                    7.713967800140381,
+                    -2.916377305984497,
+                    -2.916377305984497,
+                    -1.4668381214141846,
+                    -1.4410910606384277,
+                    5.072213649749756,
+                    5.072213649749756,
+                    1.4506933689117432,
+                    4.345155715942383,
+                    4.345155715942383,
+                    -0.3925621807575226,
+                    -0.3925621807575226,
+                    -5.729159832000732,
+                    -1.4591667652130127,
+                    -1.4591667652130127,
+                    -2.8875558376312256,
+                    -1.4021215438842773,
+                    -1.4021215438842773,
+                    -0.33012341840011805
+                  ],
+                  [
+                    -1.0624914169311523,
+                    -1.0545307397842407,
+                    -1.0479711294174194,
+                    -2.364933967590332,
+                    1.321350336074829,
+                    -1.0344679355621338,
+                    -0.8952249884605408,
+                    -0.3142295777797699,
+                    -0.2950083911418915,
+                    -0.2742583453655243,
+                    -0.5606812834739685,
+                    -0.5606812834739685,
+                    -2.4116287231445312,
+                    -2.4116287231445312,
+                    2.4571807384490967,
+                    -4.61584997177124,
+                    -0.16698870062828064,
+                    -0.16698870062828064,
+                    -0.07664400339126587,
+                    -0.05804416537284851,
+                    -1.1716010570526123,
+                    -1.1716010570526123,
+                    2.3971335887908936,
+                    -2.366093635559082,
+                    -2.366093635559082,
+                    6.626719951629639,
+                    6.626719951629639,
+                    9.287814140319824,
+                    2.3840510845184326,
+                    2.3840510845184326,
+                    4.763932704925537,
+                    2.379643201828003,
+                    2.379643201828003,
+                    1.0423309868917694
+                  ]
+                ]
+              }
+            }
+          }
+        }
+      },
+      "intentDomains": {},
+      "extraSentences": [
+        [
+          "de",
+          "moin"
+        ],
+        [
+          "de",
+          "hallo"
+        ],
+        [
+          "de",
+          "hi"
+        ],
+        [
+          "de",
+          "hey du"
+        ],
+        [
+          "de",
+          "yo"
+        ],
+        [
+          "de",
+          "guten morgen"
+        ],
+        [
+          "de",
+          "guten abend"
+        ],
+        [
+          "de",
+          "guten tag"
+        ],
+        [
+          "de",
+          "grüß gott"
+        ],
+        [
+          "de",
+          "wie alt bist du"
+        ],
+        [
+          "de",
+          "Wer hat dich gebaut"
+        ],
+        [
+          "de",
+          "Wer hat dich trainiert"
+        ],
+        [
+          "de",
+          "Wer bist du"
+        ],
+        [
+          "de",
+          "was machst du"
+        ],
+        [
+          "de",
+          "kanst du mir helfen"
+        ],
+        [
+          "de",
+          "sei schlauer"
+        ],
+        [
+          "de",
+          "bist du dumm"
+        ],
+        [
+          "de",
+          "selbst das kanst du nicht"
+        ],
+        [
+          "de",
+          "kanst du nicht dazu lernen"
+        ]
+      ]
+    },
+    "ner": {
+      "settings": {
+        "tag": "ner",
+        "entityPreffix": "%",
+        "entitySuffix": "%"
+      },
+      "rules": {}
+    },
+    "nlgManager": {
+      "settings": {
+        "tag": "nlg-manager"
+      },
+      "responses": {
+        "de": {
+          "greeting": [
+            {
+              "answer": "Moin,Moin"
+            },
+            {
+              "answer": "Moin,Moin Moin"
+            },
+            {
+              "answer": "Hey!"
+            },
+            {
+              "answer": "Hey was geht"
+            },
+            {
+              "answer": "yo was geht"
+            },
+            {
+              "answer": "Hallo du"
+            },
+            {
+              "answer": "Hi"
+            },
+            {
+              "answer": "Hallo,wie geht es dir"
+            },
+            {
+              "answer": "Guten Tag"
+            }
+          ],
+          "agent.birthday": [
+            {
+              "answer": "Ich wurde am 22.10.2023 geboren"
+            },
+            {
+              "answer": "Ich wurde von Paul meinem erbauer Programiert"
+            }
+          ],
+          "agent.whoAmI": [
+            {
+              "answer": "Ich bin ein Trainiertes neuronales Netzwerk"
+            },
+            {
+              "answer": "Ich versuche dir zu Helfen,wobei kann ich behilflich sein"
+            },
+            {
+              "answer": "Ich versuche zu helfen"
+            }
+          ],
+          "agent.beClever": [
+            {
+              "answer": "Ich versuche mich zu bessern"
+            },
+            {
+              "answer": "Ich werde meine Entwickler fragen mich schlauer zu machen"
+            },
+            {
+              "answer": "Ich bin limitiert auf das was mir beigebracht wurde"
+            }
+          ]
+        }
+      }
+    },
+    "actionManager": {
+      "settings": {
+        "tag": "action-manager"
+      },
+      "actions": {}
+    },
+    "slotManager": {}
+  }
