@@ -14,6 +14,7 @@ async function main () {
   const dock = await dockStart({ use: ['Basic']});
   const nlp = dock.get('nlp');
   nlp.addLanguage('de');
+  nlp.settings.autoSave = false;
   // Adds the utterances and intents for the NLP
   nlp.addDocument('de', 'moin' ,'greeting.hello');
   nlp.addDocument('de', 'hallo' ,'greeting.hello');
@@ -257,7 +258,7 @@ async function main () {
  
 
   await nlp.train()
-  nlp.save()
+  //nlp.save()
          //post request
     app.post('/bot/:id', async (req, res) => {
         const { id } = req.params;
