@@ -162,6 +162,10 @@ async function main () {
   nlp.addDocument('de', 'ruhe', 'action.stopSpeaking');
   nlp.addDocument('de', 'halt die ******', 'action.stopSpeaking');
 
+  nlp.addDocument('de', 'spiele musik von', 'action.music');
+  nlp.addDocument('de', 'spiele von', 'action.music');
+  nlp.addDocument('de', 'kannst du bitte entspante musik an machen', 'action.music');
+
   // Train also the NLG
 
   nlp.addAnswer('de', 'greeting.hello', 'Moin,Moin');
@@ -251,6 +255,8 @@ async function main () {
   nlp.addAnswer('de', 'action.restart', 'restart');
 
   nlp.addAnswer('de', 'action.stopSpeaking', 'stopSpeaking');
+
+  nlp.addAnswer('de', 'action.music', 'music');
 
   nlp.addAnswer('de', 'None', 'Tut mir leid aber ich habe dich nicht richtig verstanden,könntest du das etwas genauer beschreiben?');
   nlp.addAnswer('de', 'None', 'Ich habe dich nicht verstanden könntest du das widerholen?');
